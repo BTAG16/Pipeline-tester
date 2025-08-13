@@ -30,7 +30,7 @@ data-pipeline-project/
 
 ## Installation
 
-```bash
+```
 git clone https://github.com/BTAG16/Pipeline-tester.git
 cd Pipeline-tester
 python -m venv venv
@@ -38,17 +38,15 @@ source venv/bin/activate  # Linux/MacOS
 pip install -r requirements.txt
 ```
 
-Configuration
-Edit config/config.yaml to:
+## Configuration
 
-Add/change data sources
-
-Modify file paths
-
-Adjust processing parameters
+Edit `config/config.yaml` to:
+- Add/change data sources
+- Modify file paths
+- Adjust processing parameters
 
 Example configuration:
-
+```
 data_sources:
   sample_sales: "https://raw.githubusercontent.com/BTAG16/Pipeline-tester/main/pipeline_analysis.csv"
 
@@ -56,51 +54,64 @@ paths:
   raw_data: "./data/raw"
   processed_data: "./data/processed"
   logs: "./logs"
+```
+
 Usage
 Run the pipeline with default settings:
 
+```
 python src/pipeline.py
-To specify a different data source (must be defined in config.yaml):
+```
 
-python
+To specify a different data source (must be defined in config.yaml):
+```
 pipeline = DataPipeline()
 result = pipeline.run_pipeline("your_source_name")
-Outputs
+```
+
+## Outputs
 The pipeline generates:
+- **Raw data files** in `data/raw/`
+- **Processed data** in both formats:
+  - CSV (for readability)
+  - Parquet (for performance) in `data/processed/`
+- **Log files** in `logs/` with detailed execution information
 
-Raw data files in data/raw/
-
-Processed data in both CSV and Parquet formats in data/processed/
-
-Log files in logs/ with detailed execution information
-
-Development
+## Development
 To extend or modify the pipeline:
+- Add new data sources to `config.yaml`
+- Implement additional transformation logic in `transform_data()` method
+- Add validation rules in `validate_dataframe()` function
+- Create new processing methods as needed
 
-Add new data sources to config.yaml
+## Testing
+The pipeline includes built-in test capabilities:
 
-Implement additional transformation logic in transform_data() method
+- **Sample Test Data**:  
+  The default test dataset is available at:  
+  `https://raw.githubusercontent.com/BTAG16/Pipeline-tester/main/pipeline_analysis.csv`  
+  (Configured in `config/config.yaml` as the `sample_sales` data source)
 
-Add validation rules in validate_dataframe() function
+- **Test Execution**:
+  ```bash
+  python src/pipeline.py  # Runs with default test dataset
 
-Testing
-The project includes a basic test file (config/sales_success_test.csv) for pipeline validation. Future test cases should be added to the tests/ directory.
+## Requirements
+- **Python**: 3.8+
+- **Required Packages** (in `requirements.txt`):
+  - pandas
+  - pyarrow
+  - requests
+  - PyYAML
+- Optional (for development):
+  - pytest (for testing)
+  - black (for code formatting)
 
-Requirements
-Python 3.8+
+## License
+- **MIT License**
 
-Packages listed in requirements.txt:
-
-pandas
-
-pyarrow
-
-requests
-
-PyYAML
-
-License
-MIT License
-
-Author
-BTAG16
+## Author
+- **BTAG16**
+- Contact information (optional):
+  - GitHub: [@BTAG16](https://github.com/BTAG16)
+  - Email: [rumeighoraye@gmail.com](rumeighoraye@gmail@example.com)
