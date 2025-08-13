@@ -17,7 +17,6 @@ data-pipeline-project/
 │ ├── init.py # Python package initialization
 │ ├── pipeline.py # Main pipeline implementation
 │ └── utils.py # Utility functions
-├── tests/ # (Future) Test directory
 └── venv/ # Python virtual environment
 ```
 
