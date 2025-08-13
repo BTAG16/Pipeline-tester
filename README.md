@@ -4,6 +4,7 @@
 This repository contains a robust data pipeline implementation designed to extract, transform, and load (ETL) data from various sources. The pipeline is built with Python and includes features like logging, data validation, and multiple output formats.
 
 ## Project Structure
+```
 data-pipeline-project/
 ├── config/
 │ └── config.yaml # Configuration file for data sources and paths
@@ -18,6 +19,7 @@ data-pipeline-project/
 │ └── utils.py # Utility functions
 ├── tests/ # (Future) Test directory
 └── venv/ # Python virtual environment
+```
 
 ## Features
 
