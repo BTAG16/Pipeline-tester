@@ -1,0 +1,12 @@
+#config.yaml
+data_sources:
+  sample_sales: "https://raw.githubusercontent.com/BTAG16/Pipeline-tester/refs/heads/main/pipeline_analysis.csv"
+
+paths:
+  raw_data: "./data/raw"
+  processed_data: "./data/processed"
+  logs: "./logs"
+
+processing:
+  chunk_size: 1000
+  date_format: "%Y-%m-%d"

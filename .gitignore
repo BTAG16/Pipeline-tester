@@ -1,0 +1,22 @@
+# Ignore raw and processed datasets
+data/raw/
+data/processed/
+config/sales_success_test.csv
+
+# Ignore log files
+logs/
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environment
+venv/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# If you store environment variables
+.env
