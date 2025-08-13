@@ -29,6 +29,18 @@ data-pipeline-project/
 - **Comprehensive Logging**: Tracks all pipeline operations with timestamps
 - **Configuration Management**: Centralized YAML configuration for easy adjustments
 
+## Development Environment
+
+This project was developed and tested on:
+- **Ubuntu 22.04 LTS** via Windows Subsystem for Linux (WSL 2)
+- Python 3.8+
+- Common Linux command-line tools (bash, grep, etc.)
+
+### WSL-Specific Notes
+- All file paths in the configuration are Linux-style (`/` instead of `\`)
+- The pipeline has been optimized for Unix-style line endings
+- Logging system works best in Linux environments
+
 ## Installation
 
 ```
